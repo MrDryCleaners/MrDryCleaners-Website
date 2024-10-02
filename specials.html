@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Specials and promotions at MrDryCleaners.">
+    <title>MrDryCleaners | Specials</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@400;700&display=swap"></noscript>
+    <script src="your-script.js" defer></script> <!-- Replace with your JavaScript file -->
+    <style>
+        /* Bubble animation styles */
+        .bubbles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .bubbles .bubble {
+            position: absolute;
+            border-radius: 50%;
+            animation: bubble 15s infinite;
+        }
+
+        .bubbles .bubble.white {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .bubbles .bubble.blue {
+            background: rgba(0, 123, 255, 0.3);
+        }
+
+        @keyframes bubble {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+                top: -100%;
+            }
+        }
+
+        /* Ensure the content is above the bubbles */
+        .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Use consistent fonts for the Specials page */
+        #specials {
+            padding: 20px;
+            background-color: #f8f8f8;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #specials h1 {
+            color: #d9534f;
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        #specials ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #specials li {
+            margin-bottom: 10px;
+        }
+
+        /* Footer styles to match the aboutus.html */
+        footer {
+            background-color: #333; /* Black background */
+            color: white; /* White text */
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: #d9534f; /* Matching link color */
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/logov2 (2).jpg" alt="MrDryCleaners Logo" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="specials.html">Specials</a>
+            <a href="locations.html">Locations</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <!-- Bubble container -->
+        <div class="bubbles">
+            <div class="bubble white" style="width: 50px; height: 50px; top: 15%; left: 25%;"></div>
+            <div class="bubble blue" style="width: 70px; height: 70px; top: 40%; left: 45%;"></div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="specials">
+            <h1>Specials</h1>
+            <p>Check out our latest promotions and special offers:</p>
+            <ul>
+                <li>10 Shirts For $35</li>
+                <li>All Comforters $30</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 MrDryCleaners. All rights reserved.</p>
+        <p><a href="termsandconditions.html">Terms and Conditions</a></p>
+        <div class="social-links">
+            <a href="https://www.tiktok.com/@mrdrycleanersut" target="_blank" rel="noopener noreferrer">TikTok</a> |
+            <a href="https://www.instagram.com/mrdrycleanersut/" target="_blank" rel="noopener noreferrer">Instagram</a> |
+            <a href="https://www.facebook.com/mrdrycleaners/" target="_blank" rel="noopener noreferrer">Facebook</a> |
+            <a href="https://www.youtube.com/@MrDryCleanersUT" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+    </footer>
+</body>
+</html>
