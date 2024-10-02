@@ -1,0 +1,42 @@
+<!-- navigation.html -->
+<nav>
+    <div class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="specials.html">Specials</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+<body>
+    <header>
+        <img src="images/logov2 (2).jpg" alt="MrDryCleaners Logo" class="logo">
+        <div id="nav-placeholder"></div>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navPlaceholder = document.getElementById('nav-placeholder');
+            fetch('navigation.html')
+                .then(response => response.text())
+                .then(data => {
+                    navPlaceholder.innerHTML = data;
+                    // Re-add the click event listener for the nav toggle
+                    const navToggle = document.querySelector('.nav-toggle');
+                    const navUl = document.querySelector('nav ul');
+
+                    navToggle.addEventListener('click', () => {
+                        navUl.classList.toggle('active');
+                    });
+                })
+                .catch(error => console.error('Error loading navigation:', error));
+        });
+    </script>
+</body>
