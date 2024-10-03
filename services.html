@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MrDryCleaners - Our Services">
+    <title>MrDryCleaners | Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&family=Oswald:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&family=Oswald:wght@400;700&display=swap"></noscript>
+    <style>
+        /* Bubble animation styles */
+        .bubbles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .bubbles div {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: bubble 15s infinite;
+        }
+
+        @keyframes bubble {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+                top: -100%;
+            }
+        }
+
+        /* Ensure the content is above the bubbles */
+        .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header and navigation styles */
+        header {
+            background-color: #d9534f;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+        }
+
+        header img {
+            max-width: 150px;
+        }
+
+        nav {
+            position: relative;
+            z-index: 1;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section and footer styling */
+        #services {
+            padding: 20px;
+        }
+
+        #services h2 {
+            color: #d9534f;
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .services-intro {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .services-intro p {
+            font-size: 1.2em;
+            font-family: 'Roboto', sans-serif;
+            color: #555;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-item {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .service-item img {
+            width: 100%;
+            height: 200px; /* Fixed height for uniform image size */
+            object-fit: cover; /* Ensures images are properly cropped without distortion */
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .service-item h3 {
+            color: #d9534f;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .service-item p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: #d9534f;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/logov2 (2).jpg" alt="MrDryCleaners Logo" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="specials.html">Specials</a>
+            <a href="locations.html">Locations</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <!-- Bubble container -->
+        <div class="bubbles">
+            <!-- Add multiple bubbles with different sizes and animation delays -->
+            <div style="width: 60px; height: 60px; top: 10%; left: 20%; animation-delay: 0s;"></div>
+            <div style="width: 80px; height: 80px; top: 30%; left: 50%; animation-delay: 2s;"></div>
+            <div style="width: 100px; height: 100px; top: 50%; left: 30%; animation-delay: 4s;"></div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="services-intro">
+                <p>“Passion for Perfection in Every Service” - Discover our range of professional services designed to keep your garments looking their best.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-item">
+                    <img src="images/cloths.jpg" alt="Dry Cleaning">
+                    <h3>Dry Cleaning</h3>
+                    <p>We offer professional dry cleaning services to ensure your clothes look their best.</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/alterations.jpg" alt="Alterations">
+                    <h3>Alterations</h3>
+                    <p>Our expert tailors provide high-quality alterations to fit your garments perfectly.</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/stain.jpg" alt="Stain Removal">
+                    <h3>Stain Removal</h3>
+                    <p>We specialize in removing stubborn stains to restore your clothes to their original condition.</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/weddingdress.jpg" alt="Wedding Dresses">
+                    <h3>Wedding Dresses</h3>
+                    <p>Trust us with your wedding dress cleaning and preservation needs.</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/comforters.jpg" alt="Households">
+                    <h3>Households</h3>
+                    <p>We handle household items like curtains and tablecloths with care.</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/rugs.jpg" alt="Area Rugs">
+                    <h3>Area Rugs</h3>
+                    <p>Professional cleaning for your area rugs to keep them looking new.</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/uniform.jpg" alt="Uniforms">
+                    <h3>Uniforms</h3>
+                    <p>Expert cleaning for uniforms to ensure they are always presentable.</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/linen.jpg" alt="Commercial Linen">
+                    <h3>Commercial Linen</h3>
+                    <p>Reliable cleaning services for commercial linens.</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/deliveryvan.JPG" alt="Delivery">
+                    <h3>Delivery</h3>
+                    <p>Convenient delivery services for all your dry cleaning needs.</p>
+                </div>
+            </div>
+        </section>
+
+        <p style="text-align: center;">For detailed pricing and additional services, please <a href="contact.html">contact us</a> or visit us at one of our <a href="locations.html">locations</a>. To check out our prices, go to <a href="pricing.html">pricing</a>.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 MrDryCleaners. All rights reserved.</p>
+        <p><a href="termsandconditions.html">Terms and Conditions</a></p>
+        <div class="social-links">
+            <a href="https://www.tiktok.com/@mrdrycleanersut" target="_blank" rel="noopener noreferrer">TikTok</a> |
+            <a href="https://www.instagram.com/mrdrycleanersut/" target="_blank" rel="noopener noreferrer">Instagram</a> |
+            <a href="https://www.facebook.com/mrdrycleaners/" target="_blank" rel="noopener noreferrer">Facebook</a> |
+            <a href="https://www.youtube.com/@MrDryCleanersUT" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        }
+        </script>  
+</body>
+</html>
