@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterations Services | MrDryCleaners</title>
+    
+    <!-- Preload Fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@400;700&family=Oswald:wght@400;700&display=swap" as="style">
+    <link rel="preload" href="https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxP.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/oswald/v34/TK3iWkUHHAIjg75cFRf3bXL8LICs1vZK.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Load Fonts -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@400;700&family=Oswald:wght@400;700&display=swap">
+
+    <!-- Noscript Fallback -->
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@400;700&family=Oswald:wght@400;700&display=swap">
+    </noscript>
+
+    <style>
+        /* Additional styles specific to the Alterations Services page */
+        #services {
+            padding: 20px;
+            background-color: #f8f8f8; /* Light background for contrast */
+        }
+        #services h1 {
+            color: #d9534f; /* Match header color to the site theme */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0 20px;
+        }
+        .service-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .service-item h3 {
+            color: #d9534f; /* Match header color to the site theme */
+            margin-bottom: 10px;
+        }
+        .service-item p {
+            margin: 5px 0;
+            color: #333;
+        }
+
+        /* Footer styles to match the aboutus.html */
+        footer {
+            background-color: #333; /* Black background */
+            color: white; /* White text */
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: #d9534f; /* Matching link color */
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header font style */
+        nav a {
+            font-family: 'Oswald', sans-serif; /* Header font for navigation */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/logov2 (2).jpg" alt="MrDryCleaners Logo" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="locations.html">Locations</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="hamburger" onclick="toggleMenu()"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="services">
+            <h1>Alterations Services</h1>
+
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>Pants</h3>
+                    <p>Hem $21.55</p>
+                    <p>Hem Cuff $23.65</p>
+                    <p>Hem Stretch Pants $23.65</p>
+                    <p>Hem With Line Inside $23.65</p>
+                    <p>Hem Denim $23.65</p>
+                    <p>Hem Denim original $29.95</p>
+                    <p>Re-Hem one leg</p>
+                    <p>Re-Hem Both Legs $15.75</p>
+                    <p>Hem With Frayed Cuff</p>
+                    <p>Take In Waist $23.65</p>
+                    <p>Take In Waist Denim $29.95</p>
+                    <p>Let Out Waist $23.65</p>
+                    <p>Let Out Waist Add Material $29.95</p>
+                    <p>Taper Pants $26.80</p>
+                    <p>Taper Denim</p>
+                    <p>Repair Belt Loop $5.80</p>
+                    <p>Repair And Patch Belt Loop With Tear</p>
+                    <p>Replace Zipper $26.80</p>
+                </div>
+                <div class="service-item">
+                    <h3>Shirts</h3>
+                    <p>Repair Pocket $6.85</p>
+                    <p>Shorten Sleeves $20.50</p>
+                    <p>Shorten Sleeve With Cuff $26.80</p>
+                    <p>Take In $23.65</p>
+                    <p>Hem $23.65</p>
+                    <p>Hem T-Shirts $23.65</p>
+                    <p>Hem T-Shirt With Split $26.80</p>
+                    <p>Military Patch $11.05</p>
+                </div>
+                <div class="service-item">
+                    <h3>Jackets</h3>
+                    <p>Take In $42.00</p>
+                    <p>Let Out $42.00</p>
+                    <p>Hem $63.00</p>
+                    <p>Shorten Sleeves $42.00</p>
+                    <p>Lengthen Sleeves $42.00</p>
+                    <p>Replace Zipper $36.75</p>
+                    <p>Replace Zipper Ski/Down $63.00</p>
+                    <p>Military Patch $11.05</p>
+                </div>
+                <div class="service-item">
+                    <h3>Dresses</h3>
+                    <p>Take In Waist $26.25</p>
+                    <p>Take In Waist With Lining $31.50</p>
+                    <p>Hem $26.25</p>
+                    <p>Hem With Line $37.80</p>
+                    <p>Hem With 2 Layers $52.50</p>
+                    <p>Replace Zipper (short) $26.25</p>
+                    <p>Replace Zipper (long) $32.05</p>
+                </div>
+                <div class="service-item">
+                    <h3>Coats</h3>
+                    <p>Replace Coat Zipper (short) $42.00</p>
+                    <p>Medium Coat Zipper (ski) $63.00</p>
+                </div>
+                <div class="service-item">
+                    <h3>Shorts</h3>
+                    <p>Prices May Vary</p>
+                </div>
+                <div class="service-item">
+                    <h3>Skirts</h3>
+                    <p>Prices May Vary</p>
+                </div>
+                <div class="service-item">
+                    <h3>Clean and Alter</h3>
+                    <p>Prices May Vary</p>
+                </div>
+                <div class="service-item">
+                    <h3>Miscellaneous</h3>
+                    <p>Zipper Glider $15.75</p>
+                    <p>Military Patch $11.05</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <p style="text-align: center;">For detailed pricing and additional services, please <a href="contact.html">contact us</a> or visit us at one of our <a href="locations.html">locations</a>.</p>
+    
+    <footer>
+        <p>&copy; 2024 MrDryCleaners. All rights reserved.</p>
+        <p><a href="termsandconditions.html">Terms and Conditions</a></p>
+        <div class="social-links">
+            <a href="https://www.tiktok.com/@mrdrycleanersut" target="_blank" rel="noopener noreferrer">TikTok</a> |
+            <a href="https://www.instagram.com/mrdrycleanersut/" target="_blank" rel="noopener noreferrer">Instagram</a> |
+            <a href="https://www.facebook.com/mrdrycleaners/" target="_blank" rel="noopener noreferrer">Facebook</a> |
+            <a href="https://www.youtube.com/@MrDryCleanersUT" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        }
+        </script>
+</body>
+</html>
