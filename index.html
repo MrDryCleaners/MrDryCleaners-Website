@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MrDryCleaners - Professional and reliable dry cleaning services.">
+    <title>MrDryCleaners | Home</title>
+    <!-- Preload the fonts -->
+ <!-- Preload Google Fonts -->
+ <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Oswald:wght@400;700&display=swap" as="style" onload="this.rel='stylesheet'">
+ <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Oswald:wght@400;700&display=swap"></noscript>
+
+ <link rel="stylesheet" href="styles.css">
+
+ <!-- Preload JavaScript file if applicable (replace with your JS file path) -->
+ <link rel="preload" href="script.js" as="script">
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Reset and Base Styles */
+        body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .logo {
+            height: 60px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #000000; /* Highlight color on hover */
+        }
+
+        /* Floating Hours Tab */
+        .hours-tab {
+            position: fixed;
+            top: 5px; /* Move the tab up */
+            right: 10px;
+            background-color: #444;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            font-size: 12px;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .hours-tab h3 {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .hours-tab p {
+            margin: 2px 0;
+            font-size: 12px;
+        }
+
+        /* Bubble Animation Styles */
+        .bubbles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .bubbles .bubble {
+            position: absolute;
+            border-radius: 50%;
+            animation: bubble 20s infinite;
+        }
+
+        .bubbles .bubble.white {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .bubbles .bubble.blue {
+            background: rgba(0, 123, 255, 0.3);
+        }
+
+        @keyframes bubble {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+                top: -100%;
+            }
+        }
+
+        /* Main Container */
+        .container {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+        }
+
+        /* Home Section */
+        #home {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .home-description {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .home-description h2.slogan {
+            font-family: 'Dancing Script', cursive;
+            font-size: 24px;
+            color: #d9534f;
+            margin-bottom: 10px;
+        }
+
+        .home-description h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .home-description p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .home-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Section Styles */
+        section {
+            margin: 20px 0;
+        }
+
+        section h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #666;
+        }
+
+        section a {
+            color: #d9534f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section a:hover {
+            text-decoration: underline;
+        }
+
+        /* Testimonials Section */
+        #testimonials {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .testimonials {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .testimonial-item {
+            flex: 1 1 calc(50% - 20px);
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .testimonial-item img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-item p {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-item strong {
+            display: block;
+            font-size: 14px;
+            color: #d9534f;
+        }
+
+        /* CTA Section */
+        #cta {
+            background-color: #d9534f;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        #cta h2 {
+            margin-bottom: 10px;
+        }
+
+        #cta p {
+            margin-bottom: 10px;
+        }
+
+        #cta a {
+            color: white;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+            border-top: 1px solid #444;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #d9534f;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links {
+            margin-top: 10px;
+        }
+
+        /* About Us Section Styles */
+        #about-us {
+            margin: 20px 0;
+        }
+
+        #about-us h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        #about-us p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #666;
+        }
+
+        #about-us .social-links {
+            margin-top: 10px;
+        }
+
+        #about-us .social-links a {
+            color: #d9534f;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        #about-us .social-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/logov2 (2).jpg" alt="MrDryCleaners Logo" class="logo">
+        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="specials.html">Specials</a>
+            <a href="locations.html">Locations</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <!-- Bubble container -->
+        <div class="bubbles">
+            <div class="bubble white" style="width: 50px; height: 50px; top: 10%; left: 20%;"></div>
+            <div class="bubble blue" style="width: 60px; height: 60px; top: 30%; left: 50%;"></div>
+            <div class="bubble white" style="width: 70px; height: 70px; top: 25%; left: 10%;"></div>
+            <div class="bubble blue" style="width: 40px; height: 40px; top: 50%; left: 80%;"></div>
+            <div class="bubble white" style="width: 60px; height: 60px; top: 40%; left: 70%;"></div>
+            <div class="bubble blue" style="width: 80px; height: 80px; top: 60%; left: 30%;"></div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="home">
+            <div class="home-description">
+                <h2 class="slogan">"Exceptional Care for Every Thread"</h2>
+                <h1>Welcome to MrDryCleaners</h1>
+                <p>At MrDryCleaners, we take pride in offering top-notch dry cleaning services with a personal touch. Our dedicated team ensures that every garment receives the highest level of care and attention. From everyday wear to special occasion outfits, we handle each piece with meticulous care to keep your clothes looking their best. We are committed to providing exceptional service and ensuring your complete satisfaction with every visit.</p>
+            </div>
+            <div class="home-image">
+                <img src="images/Mr. Le's Cleaners emoji.jpg" alt="Dry Cleaning Service Image">
+            </div>
+        </section>
+
+        <!-- New About Us Section -->
+        <section id="about-us">
+            <h2>About Us</h2>
+            <p>At MrDryCleaners, we are committed to delivering high-quality dry cleaning services with a personal touch. Our team of dedicated professionals ensures that every garment receives meticulous care and attention, keeping your clothes looking their best. We blend modern cleaning technology with eco-friendly practices to provide you with exceptional service and environmental responsibility.</p>
+            <p>Connect with us on social media to stay updated with our latest news, promotions, and special offers. Follow us on:</p>
+            <div class="social-links">
+                <a href="https://www.tiktok.com/@mrdrycleanersut" target="_blank" rel="noopener noreferrer">TikTok</a> |
+                <a href="https://www.instagram.com/mrdrycleanersut/" target="_blank" rel="noopener noreferrer">Instagram</a> |
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a> |
+                <a href="https://www.youtube.com/@MrDryCleanersUT" target="_blank" rel="noopener noreferrer">YouTube</a>
+            </div>
+            <p>Want to learn more about dry cleaning and laundry? <a href="blog.html">Check out our blog!</a></p>
+        </section>
+        <!-- Existing Sections -->
+        <section id="services-overview">
+            <h2>Our Services</h2>
+            <p>We offer a wide range of dry cleaning and garment care services including suits, dresses, casual wear, and even special items like wedding gowns. Whether you need everyday cleaning or special fabric care, we’ve got you covered.</p>
+            <p><a href="services.html">Learn more about our services</a></p>
+        </section>
+
+        <section id="special-offers">
+            <h2>Current Specials</h2>
+            <p>Visit our <a href="specials.html">Specials Page</a> for more details.</p>
+        </section>
+
+        <section id="why-choose-us">
+            <h2>Why Choose Us?</h2>
+            <p>With years of experience in the dry cleaning industry, MrDryCleaners is dedicated to delivering quality service with a family touch. Our state-of-the-art cleaning technology ensures your garments are treated with the utmost care. Plus, we offer eco-friendly cleaning solutions to protect the environment while keeping your clothes spotless.</p>
+        </section>
+
+        <section id="testimonials">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonials">
+                <div class="testimonial-item">
+                    <img src="images/review1.jpg.png" alt="Customer Photo">
+                    <p>"Both of the ladies that helped me when I dropped off and picked up were very nice. They did an awesome job with my suit, and even had it done a day earlier than expected. Also they have the lowest prices I could find. 5/5 would definitely recommend"</p>
+                    <strong>- Christopher Ibarra</strong>
+                </div>
+                <div class="testimonial-item">
+                    <img src="images/review2.jpg.png" alt="Customer Photo">
+                    <p>"These guys always do a great job and do it quickly. I get a text when it is ready, and they are either on time or early. Great people!"</p>
+                    <strong>- Ron Rhoades</strong>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta">
+            <h2>Ready to Experience Exceptional Service?</h2>
+            <p>Let us handle your dry cleaning needs with care and precision.</p>
+            <p><a href="contact.html">Contact Us Today</a></p>
+        </section>
+    </div>
+
+    <div class="hours-tab">
+        <h3>Hours</h3>
+        <p>Mon - Fri</p>
+        <p>8 am - 6 pm</p>
+        <p>Sat 9 am - 4 pm</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 MrDryCleaners. All rights reserved.</p>
+        <p><a href="termsandconditions.html">Terms and Conditions</a></p>
+        <div class="social-links">
+            <a href="https://www.tiktok.com/@mrdrycleanersut" target="_blank" rel="noopener noreferrer">TikTok</a> |
+            <a href="https://www.instagram.com/mrdrycleanersut/" target="_blank" rel="noopener noreferrer">Instagram</a> |
+            <a href="https://www.facebook.com/mrdrycleaners/" target="_blank" rel="noopener noreferrer">Facebook</a> |
+            <a href="https://www.youtube.com/@MrDryCleanersUT" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+    </footer>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+    </script>    
+</body>
+</html>
